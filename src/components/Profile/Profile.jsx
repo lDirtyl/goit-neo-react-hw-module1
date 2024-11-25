@@ -1,3 +1,5 @@
+import css from "./Profile.module.css";
+
 const Profile = ({
   name,
   tag,
@@ -6,26 +8,26 @@ const Profile = ({
   stats: { followers, views, likes },
 }) => {
   return (
-    <div>
-      <div>
-        <img src={image} alt={name} />
-        <p>{name}</p>
-        <p>@{tag}</p>
-        <p>{location}</p>
+    <div className={css.cardWrapper}>
+      <div className={css.cardInfo}>
+        <img src={image} alt={name} className={css.cardImage} />
+        <p className={css.cardName}>{name}</p>
+        <p className={css.cardTag}>@{tag}</p>
+        <p className={css.cardLocation}>{location}</p>
       </div>
 
-      <ul>
-        <li>
-          <span>Followers</span>
-          <span>{followers}</span>
+      <ul className={css.cardStats}>
+        <li className={css.cardStatItem}>
+          <span className={css.csrdStatTitle}>Followers</span>
+          <span className={css.csrdStatValue}>{followers}</span>
         </li>
-        <li>
-          <span>Views</span>
-          <span>{views}</span>
+        <li className={css.cardStatItem}>
+          <span className={css.csrdStatTitle}>Views</span>
+          <span className={css.csrdStatValue}>{views}</span>
         </li>
-        <li>
-          <span>Likes</span>
-          <span>{likes}</span>
+        <li className={css.cardStatItem}>
+          <span className={css.csrdStatTitle}>Likes</span>
+          <span className={css.csrdStatValue}>{likes}</span>
         </li>
       </ul>
     </div>
