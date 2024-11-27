@@ -1,5 +1,5 @@
-import css from "./FriendList.module.css";
 import clsx from "clsx";
+import css from "./FriendList.module.css";
 
 const FriendListItem = ({ friend }) => {
   const status = friend.isOnline ? "Online" : "Offline";
